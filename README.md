@@ -15,11 +15,6 @@ ssh-keygen -t ed25519 -C "yourname@example.com"
 これで ~/.ssh/id_ed25519.pub ができます。
 このファイルの中身を authorized_keys を作成してそこにコピーしてください。
 
-セキュリティ注意
-	•	秘密鍵（id_ed25519）は絶対に公開しないでください
-	•	authorized_keys は各自で作成し、このリポジトリには含めないようにしてください
-	•	.gitignore で無視されるようになっています
-
 ### 2. Docker イメージをビルド & 起動
 
 ```bash
