@@ -1,0 +1,17 @@
+Port 22
+Protocol 2
+PermitRootLogin no
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding no
+AllowTcpForwarding no
+GatewayPorts no
+AllowAgentForwarding yes
+PubkeyAuthentication yes
+AuthorizedKeysFile     .ssh/authorized_keys
+Subsystem sftp internal-sftp
+
+# 特定ユーザーのみ許可
+AllowUsers dev

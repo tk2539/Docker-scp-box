@@ -1,0 +1,10 @@
+services:
+  sshbox:
+    build: .
+    container_name: sshbox
+    ports:
+      - "2222:22"           # ホスト : コンテナ
+    volumes:
+      - ./data/home:/home/dev        # ホームを永続化
+      - ./authorized_keys:/home/dev/.ssh/authorized_keys:ro
+    restart: unless-stopped
